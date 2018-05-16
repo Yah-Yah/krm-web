@@ -1,0 +1,50 @@
+/********************************************
+	FONT SIZING
+********************************************/
+body {
+  font-size: 1em;
+  line-height: 1.4em;
+  font-family: $roboto-regular;
+  color: $grey-darkest;
+
+  @include for-tablet-landscape {
+    font-size: 1.5em;
+  }
+}
+p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.75em;
+}
+
+.wrapper {
+  box-sizing: border-box;
+}
+
+main {
+  margin-top:3em;
+}

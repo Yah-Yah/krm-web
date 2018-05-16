@@ -1,0 +1,39 @@
+//Fonts:
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,400,500,700');
+
+//Fallbacks:
+$font-sans-fallback: 'Helvetica', 'Verdana', sans-serif;
+$font-serif-fallback: 'Times New Roman', 'Times', serif;
+
+//Roboto
+$roboto-light: 'Roboto Light', $font-sans-fallback;
+$roboto-regular: 'Roboto Regular', $font-sans-fallback;
+$roboto-medium: 'Roboto Medium', $font-sans-fallback;
+$roboto-bold: 'Roboto Bold', $font-sans-fallback;
+
+//Roboto Slab
+$roboto-slab-light: 'Roboto Slab Light', $font-serif-fallback;
+$roboto-slab-regular: 'Roboto Slab Regular', $font-serif-fallback;
+$roboto-slab-bold: 'Roboto Slab Bold', $font-serif-fallback;
+
+//Typography (copied from James's):
+$font-header-xjumbo: 6em;//96px
+$font-header-jumbo: 3.625em;//58px
+$font-header-large: 2.25em;//38px
+$font-header-medium: 2.125em;//34px
+$font-header-small: 1.875em;//30px
+
+$font-subheader-jumbo: 1.75em;//28px
+$font-subheader-large: 1.5em;//24px
+$font-subheader-medium: 1.4375em;//23px
+$font-subheader-small: 1.375em;//22px
+$font-subheader-xsmall: 1.3125em;//21px
+
+$font-xjumbo: 1.25em;//20px
+$font-jumbo: 1.125em;//18px
+$font-large: 1.0625em;//17px
+$font-medium: 1em;//16px
+$font-small: 0.875em;//14px
+$font-xsmall: 0.8125em;//13px
+$font-xxsmall: 0.75em;//12px
+$font-tiny: 0.625em;//10px

@@ -1,0 +1,311 @@
+/********************************************
+	RESET
+********************************************/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,400,500,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/********************************************
+	NORMALIZE
+********************************************/
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  min-height: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block; }
+
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+textarea {
+  overflow: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Breakpoints best practice according to: https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */
+/********************************************
+	FONT SIZING
+********************************************/
+body {
+  font-size: 1em;
+  line-height: 1.4em;
+  font-family: "Roboto Regular", "Helvetica", "Verdana", sans-serif;
+  color: #444343; }
+  @media (min-width: 900px) {
+    body {
+      font-size: 1.5em; } }
+
+p {
+  font-size: 1em; }
+
+h1 {
+  font-size: 3em;
+  font-family: 'Roboto Slab';
+  font-weight: 300; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.17em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.83em; }
+
+h6 {
+  font-size: 0.75em; }
+
+.wrapper {
+  box-sizing: border-box; }
+
+main {
+  margin-top: 3em; }
+
+/* ******************************************
+	   NAVIGATION
+****************************************** */
+header {
+  padding: 1em 1.25em; }
+  header:before, header:after {
+    content: "";
+    display: table; }
+  header:after {
+    clear: both; }
+
+#masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff; }
+  #masthead .logo {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 150px; }
+    @media (min-width: 900px) {
+      #masthead .logo {
+        width: 250px;
+        float: left;
+        left: 5px;
+        transform: none; } }
+  #masthead .to-nav {
+    float: left;
+    text-decoration: none;
+    padding: 0 1em;
+    margin-right: 2em; }
+    #masthead .to-nav img {
+      height: 1.5em; }
+    @media (min-width: 900px) {
+      #masthead .to-nav {
+        display: none; } }
+  #masthead .donate {
+    float: right;
+    color: #fff;
+    background: #cb572a;
+    text-decoration: none;
+    padding: 0.25em 1em 0.15em;
+    margin-left: 2em;
+    border-radius: 2em;
+    font-size: 12px;
+    font-size: 0.75rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    #masthead .donate:hover, #masthead .donate:focus {
+      background: #feede0; }
+
+#container-nav {
+  background: #fff;
+  margin: 0 auto;
+  display: block; }
+
+#primary-nav {
+  padding: .65em 0;
+  display: inline-block; }
+  #primary-nav ul {
+    background: #fff;
+    padding: 5px 0; }
+  #primary-nav li {
+    border-bottom: 1px solid #cb572a; }
+    #primary-nav li:last-child {
+      border-bottom: none; }
+    #primary-nav li a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.88em;
+      font-weight: 500; }
+  @media (min-width: 900px) {
+    #primary-nav {
+      position: absolute;
+      top: 15px;
+      left: 280px;
+      background: #fff; }
+      #primary-nav li {
+        display: inline;
+        border-bottom: none; }
+      #primary-nav li a {
+        float: left;
+        padding: 0 20px; } }
+
+/* ******************************************
+	   CONTENT: HERO
+****************************************** */
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .hero h1 {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em; }
+
+footer {
+  border-top: solid 1px #cb572a; }
+  footer .logo {
+    width: 11.36em; }
+  footer h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #444343; }
+  footer .contact {
+    padding: 0 0 1.3em; }
+    footer .contact ul {
+      list-style: none;
+      padding: 1.3em 0 0; }
+    footer .contact li {
+      padding: 0 0 .65em; }
+  footer legend {
+    font-size: 1.382em;
+    line-height: 1.223; }
+  footer label {
+    display: block;
+    font-size: 0.755em;
+    line-height: 1.56;
+    padding: 0 0 .325em;
+    font-weight: 400;
+    color: #a6a3a2; }
+  footer input {
+    display: block;
+    width: 8.72em;
+    font-size: 0.76em;
+    line-height: 1.3;
+    font-weight: 400;
+    padding: .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #eee;
+    border: 2px solid #cb572a;
+    border-radius: 2em;
+    box-shadow: none;
+    outline: none; }
+  footer .subscribe {
+    display: inline-block;
+    max-width: 6.8em;
+    font-size: 0.72em;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: #cb572a;
+    margin: .65em .26em;
+    padding: .975em;
+    border: 0;
+    border-radius: 2em;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    footer .subscribe:hover {
+      background: #feede0; }
+
+.container-footer {
+  padding: 1.3em 0;
+  background: #fff;
+  color: #707070;
+  font-weight: 400;
+  font-size: 0.8em; }
+
+/*# sourceMappingURL=main.css.map */

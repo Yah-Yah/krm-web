@@ -1,0 +1,134 @@
+
+/* ******************************************
+	   NAVIGATION
+****************************************** */
+header {
+  padding: 1em 1.25em;
+
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+
+  &:after {
+    clear:both;
+  }
+}
+
+#masthead {
+  position: fixed;
+  top:0;
+  width: 100%;
+  background: $white;
+
+  .logo {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 150px;
+
+    @include for-tablet-landscape {
+      width: 250px;
+      float: left;
+      left: 5px;
+      transform: none;
+    }
+  }
+
+  .to-nav {
+    float: left;
+    text-decoration: none;
+    padding: 0 1em;
+    margin-right: 2em;
+
+    img {
+      height: 1.5em;
+    }
+
+    @include for-tablet-landscape {
+      display: none;
+    }
+  }
+
+  .donate {
+    float: right;
+    color: #fff;
+    background: $orange;
+    text-decoration: none;
+    padding: 0.25em 1em 0.15em;
+    margin-left: 2em;
+
+    border-radius: 2em;
+
+    @include font-size(12px);
+
+    @include transition(all 0.30s ease-in-out);
+
+    &:hover,
+    &:focus {
+      background: $orange-palest;
+    }
+  }
+}
+
+#container-nav {
+  background: $white;
+  // width: 1604px;
+  margin: 0 auto;
+  display: block;
+}
+
+#primary-nav {
+  padding: .65em 0;
+  display: inline-block;
+  // overflow: hidden;
+
+  ul {
+    background: $white;
+    padding: 5px 0;
+    // margin: .65em 0 .39em;
+  }
+
+  li {
+    // display: block;
+    // float: left;
+    // background: $orange;
+    border-bottom: 1px solid $orange;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.88em;
+      font-weight: 500;
+      // padding-top: .975em;
+    }
+
+  }
+
+  @include for-tablet-landscape {
+  // #container-nav {
+  //     position: relative;
+  //     width: 768px;
+  //     margin: auto;
+  // }
+    position: absolute;
+    top: 15px;
+    left: 280px;
+    background: $white;
+
+    li {
+      display: inline;
+      border-bottom: none;
+    }
+
+    li a {
+      float: left;
+      padding: 0 20px;
+    }
+  }
+}

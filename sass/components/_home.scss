@@ -1,0 +1,19 @@
+/* ******************************************
+	   CONTENT: HERO
+****************************************** */
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: $white;
+    text-align: center;
+    padding: 3em 1em;
+  }
+}
