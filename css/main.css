@@ -102,7 +102,7 @@ body {
   line-height: 1.4em;
   font-family: "Roboto Regular", "Helvetica", "Verdana", sans-serif;
   color: #444343; }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     body {
       font-size: 1.5em; } }
 
@@ -132,47 +132,48 @@ h6 {
 .wrapper {
   box-sizing: border-box; }
 
-main {
-  margin-top: 3em; }
-
 /* ******************************************
 	   NAVIGATION
 ****************************************** */
 header {
-  padding: 1em 1.25em; }
+  height: 3.75em;
+  padding: 1em 1.25em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #fff; }
   header:before, header:after {
     content: "";
     display: table; }
   header:after {
     clear: both; }
 
-#masthead {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff; }
-  #masthead .logo {
-    left: 50%;
+.masthead {
+  width: 100%; }
+  .masthead .logo {
     position: absolute;
+    left: 50%;
     transform: translateX(-50%);
     width: 150px; }
-    @media (min-width: 900px) {
-      #masthead .logo {
+    @media (min-width: 1200px) {
+      .masthead .logo {
         width: 250px;
         float: left;
         left: 5px;
         transform: none; } }
-  #masthead .to-nav {
+  .masthead .nav-bar {
+    width: 100%; }
+  .masthead .nav-menu {
     float: left;
     text-decoration: none;
     padding: 0 1em;
     margin-right: 2em; }
-    #masthead .to-nav img {
+    .masthead .nav-menu img {
       height: 1.5em; }
-    @media (min-width: 900px) {
-      #masthead .to-nav {
+    @media (min-width: 1200px) {
+      .masthead .nav-menu {
         display: none; } }
-  #masthead .donate {
+  .masthead .donate {
     float: right;
     color: #fff;
     background: #cb572a;
@@ -180,6 +181,7 @@ header {
     padding: 0.25em 1em 0.15em;
     margin-left: 2em;
     border-radius: 2em;
+    height: 1.75em;
     font-size: 12px;
     font-size: 0.75rem;
     -webkit-transition: all 0.3s ease-in-out;
@@ -187,39 +189,43 @@ header {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    #masthead .donate:hover, #masthead .donate:focus {
+    .masthead .donate:hover, .masthead .donate:focus {
       background: #feede0; }
 
-#container-nav {
-  background: #fff;
+.container-nav {
   margin: 0 auto;
   display: block; }
 
-#primary-nav {
-  padding: .65em 0;
-  display: inline-block; }
-  #primary-nav ul {
-    background: #fff;
-    padding: 5px 0; }
-  #primary-nav li {
-    border-bottom: 1px solid #cb572a; }
-    #primary-nav li:last-child {
+.primary-nav {
+  padding: 2.65em 0;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3.75em;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%; }
+  .primary-nav li {
+    padding: 1em;
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid #fff; }
+    .primary-nav li:last-child {
       border-bottom: none; }
-    #primary-nav li a {
-      color: inherit;
+    .primary-nav li a {
+      color: #fff;
       text-decoration: none;
-      font-size: 0.88em;
-      font-weight: 500; }
-  @media (min-width: 900px) {
-    #primary-nav {
+      font-size: 1.875em; }
+  @media (min-width: 1200px) {
+    .primary-nav {
       position: absolute;
       top: 15px;
       left: 280px;
       background: #fff; }
-      #primary-nav li {
+      .primary-nav li {
         display: inline;
         border-bottom: none; }
-      #primary-nav li a {
+      .primary-nav li a {
         float: left;
         padding: 0 20px; } }
 

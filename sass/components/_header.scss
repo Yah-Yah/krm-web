@@ -3,7 +3,12 @@
 	   NAVIGATION
 ****************************************** */
 header {
+  height: 3.75em;
   padding: 1em 1.25em;
+  position: fixed;
+  top:0;
+  z-index: 100;
+  background-color: $white;
 
   &:before,
   &:after {
@@ -16,19 +21,18 @@ header {
   }
 }
 
-#masthead {
-  position: fixed;
-  top:0;
+.masthead {
+  // position: fixed;
+  // top:0;
   width: 100%;
-  background: $white;
 
   .logo {
-    left: 50%;
     position: absolute;
+    left: 50%;
     transform: translateX(-50%);
     width: 150px;
 
-    @include for-tablet-landscape {
+    @include for-desktop-up {
       width: 250px;
       float: left;
       left: 5px;
@@ -36,7 +40,13 @@ header {
     }
   }
 
-  .to-nav {
+  .nav-bar {
+    width: 100%;
+    // background-color: $white;
+  }
+
+  .nav-menu {
+    // background: $white;
     float: left;
     text-decoration: none;
     padding: 0 1em;
@@ -46,20 +56,20 @@ header {
       height: 1.5em;
     }
 
-    @include for-tablet-landscape {
+    @include for-desktop-up {
       display: none;
     }
   }
 
   .donate {
     float: right;
-    color: #fff;
+    color: $white;
     background: $orange;
     text-decoration: none;
     padding: 0.25em 1em 0.15em;
     margin-left: 2em;
-
     border-radius: 2em;
+    height: 1.75em;
 
     @include font-size(12px);
 
@@ -72,45 +82,54 @@ header {
   }
 }
 
-#container-nav {
-  background: $white;
+.container-nav {
   // width: 1604px;
   margin: 0 auto;
   display: block;
 }
 
-#primary-nav {
-  padding: .65em 0;
+.primary-nav {
+  padding: 2.65em 0;
   display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3.75em;
+  background: $black-shade;
+  width: 100%;
   // overflow: hidden;
 
   ul {
-    background: $white;
-    padding: 5px 0;
+    // position: relative;
+    // padding: 0.5em 0;
     // margin: .65em 0 .39em;
   }
 
   li {
+    padding: 1em;
+    text-align: center;
+    // font-family: $roboto-light;
+    font-weight: 300;
     // display: block;
     // float: left;
     // background: $orange;
-    border-bottom: 1px solid $orange;
+    border-bottom: 1px solid $white;
 
     &:last-child {
       border-bottom: none;
     }
 
     a {
-      color: inherit;
+      color: $white;
       text-decoration: none;
-      font-size: 0.88em;
-      font-weight: 500;
+      font-size: 1.875em;
+      // font-weight: 300;
       // padding-top: .975em;
     }
 
   }
 
-  @include for-tablet-landscape {
+  @include for-desktop-up {
   // #container-nav {
   //     position: relative;
   //     width: 768px;
